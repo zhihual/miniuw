@@ -1,5 +1,11 @@
+ROOTOBJ := drv.o
+
+
+OBJS := $(ROOTOBJ) 
+
+
 obj-m += miniuw.o
-miniuw-y += drv.o bmi.o
+miniuw-y += $(OBJS)
 KERNELDIR := $(shell uname -r)
 PWD := $(shell pwd)
 
